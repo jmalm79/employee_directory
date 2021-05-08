@@ -15,7 +15,8 @@ const Search = () => {
       { name: 'name', width: '15%', order: 'desc' },
       { name: 'phone', width: '10%', order: 'desc' },
       { name: 'email', width: '20%', order: 'desc' },
-      { name: 'dob', width: '10%', order: 'desc' },
+      { name: 'username', width: '10%', order: 'desc' },
+      { name: 'location', width: '15%', order: 'desc' },
     ],
   });
 

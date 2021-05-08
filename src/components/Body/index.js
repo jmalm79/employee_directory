@@ -3,23 +3,12 @@ import SearchContext from '../../utils/SearchContext';
 
 const Body = () => {
   const context = useContext(SearchContext);
-
-  function Date(date) {
-    const dateArray = date.split('-');
-    const year = dateArray[0];
-    const month = dateArray[1];
-    const dayArray = dateArray[2].split('T');
-    const day = dayArray[0];
-    const formattedDate = [month, day, year].join('-');
-    return formattedDate;
-  }
-
   return (
     <tbody>
       {context.developerState.filteredUsers[0] !== undefined &&
       context.developerState.filteredUsers[0].name !== undefined ? (
         context.developerState.filteredUsers.map(
-          ({ login, name, picture, phone, email, dob }) => {
+          ({ login, name, picture, phone, email, username, location }) => {
             return (
               <tr key={login.uuid}>
                 <td data-th='Image' className='align-middle'>
@@ -40,8 +29,11 @@ const Body = () => {
                     {email}
                   </a>
                 </td>
-                <td data-th='DOB' className='align-middle'>
-                  {Date(dob.date)}
+                <td data-th='Username' className='align-middle'>
+                  {login.username}
+                </td>
+                <td data-th='Location' className='align-middle'>
+                  {location.city} / {location.state}
                 </td>
               </tr>
             );
