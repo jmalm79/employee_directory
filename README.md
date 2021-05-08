@@ -43,6 +43,8 @@ Use it
 
 Please contact me with any questions about this project. 
 
+heroku URL for deployed app [https://lit-stream-02156.herokuapp.com/](https://lit-stream-02156.herokuapp.com/)
+
 My GitHub URL is [https://github.com/jmalm79](https://github.com/jmalm79)
 
 Email: jmalm79@gmail.com
